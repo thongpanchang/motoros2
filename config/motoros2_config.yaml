@@ -11,8 +11,8 @@
 # to/from MotoROS2 will route through the Agent application.
 # (There is no default value for these fields. They must be specified by
 # the user.)
-#agent_ip_address: "192.168.255.50"
-#agent_port_number: 8888
+agent_ip_address: "192.168.31.200"
+agent_port_number: 8888
 
 
 # Any settings that are not specified will be set to their DEFAULT value.
@@ -25,7 +25,7 @@
 # information. This setting works exactly like its ROS 2 analogue.
 #
 # DEFAULT: 0 (the default ROS 2 domain ID)
-#ros_domain_id: 0
+ros_domain_id: 10
 
 #-----------------------------------------------------------------------------
 # Name under which MotoROS2 should register with the ROS 2 node graph.
@@ -37,7 +37,7 @@
 # Namespace to use for the MotoROS2 node and all topics.
 #
 # DEFAULT: ""  (empty string)
-#node_namespace: ""
+node_namespace: "robot_inbound"
 
 #-----------------------------------------------------------------------------
 # Remap rules to apply to ROS 2 resource names.
@@ -85,7 +85,7 @@ sync_timeclock_with_agent: true
 # cause network disconnections).
 #
 # DEFAULT: true
-#userlan_monitor_enabled: true
+userlan_monitor_enabled: true
 
 #-----------------------------------------------------------------------------
 # Which port should MotoROS2 monitor, if 'userlan_monitor_enabled' is 'true'?
@@ -121,7 +121,8 @@ sync_timeclock_with_agent: true
 #
 # OPTIONS: USER_LAN1, USER_LAN2
 # DEFAULT: USER_LAN1
-#userlan_monitor_port: USER_LAN1
+# USER_LAN2: for YRC1000 controllers with Agent on USER_LAN2
+userlan_monitor_port: USER_LAN2
 
 #-----------------------------------------------------------------------------
 # If the Agent PC disconnects from the robot while it is in motion, should the
@@ -160,7 +161,7 @@ namespace_tf: true
 #       automatically.
 #
 # DEFAULT: ""  (empty string)
-#tf_frame_prefix: ""
+tf_frame_prefix: "robot_inbound/"
 
 #-----------------------------------------------------------------------------
 # Joints in this configuration file must be listed in the order of Robots,
@@ -236,7 +237,7 @@ publisher_qos:
   robot_status: sensor_data
 
   # DEFAULT: sensor_data
-  joint_states: sensor_data
+  joint_states: default
 
   # DEFAULT: default
   tf: default
@@ -253,7 +254,7 @@ publisher_qos:
 #       of the job should be specified.
 #
 # DEFAULT: "INIT_ROS"
-#inform_job_name: "INIT_ROS"
+inform_job_name: "INIT_ROS"
 
 #-----------------------------------------------------------------------------
 # Allow custom INFORM job.
@@ -299,7 +300,7 @@ publisher_qos:
 # https://github.com/Yaskawa-Global/motoros2/tree/main/tools
 #
 # DEFAULT: true
-#debug_broadcast_enabled: true
+# debug_broadcast_enabled: true
 
 #-----------------------------------------------------------------------------
 # Which network port(s) should MotoROS2 broadcast debug messages on, if
@@ -317,4 +318,4 @@ publisher_qos:
 #
 # OPTIONS: USER_LAN1, USER_LAN2
 # DEFAULT: (all available network ports)
-#debug_broadcast_port: USER_LAN1
+# debug_broadcast_port: USER_LAN2
