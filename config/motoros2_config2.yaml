@@ -11,7 +11,7 @@
 # to/from MotoROS2 will route through the Agent application.
 # (There is no default value for these fields. They must be specified by
 # the user.)
-agent_ip_address: "192.168.31.200"
+agent_ip_address: "192.168.31.201"
 agent_port_number: 8888
 
 
@@ -37,7 +37,7 @@ ros_domain_id: 10
 # Namespace to use for the MotoROS2 node and all topics.
 #
 # DEFAULT: ""  (empty string)
-node_namespace: "robot_inbound"
+node_namespace: "robot_outbound"
 
 #-----------------------------------------------------------------------------
 # Remap rules to apply to ROS 2 resource names.
@@ -161,7 +161,7 @@ namespace_tf: true
 #       automatically.
 #
 # DEFAULT: ""  (empty string)
-tf_frame_prefix: "robot_inbound/"
+tf_frame_prefix: "robot_outbound/"
 
 #-----------------------------------------------------------------------------
 # Joints in this configuration file must be listed in the order of Robots,
