@@ -300,7 +300,7 @@ allow_custom_inform_job: true
 # https://github.com/Yaskawa-Global/motoros2/tree/main/tools
 #
 # DEFAULT: true
-# debug_broadcast_enabled: true
+debug_broadcast_enabled: true
 
 #-----------------------------------------------------------------------------
 # Which network port(s) should MotoROS2 broadcast debug messages on, if
