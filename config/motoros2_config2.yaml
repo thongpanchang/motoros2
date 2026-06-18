@@ -237,7 +237,7 @@ publisher_qos:
   robot_status: sensor_data
 
   # DEFAULT: sensor_data
-  joint_states: default
+  joint_states: sensor_data
 
   # DEFAULT: default
   tf: default
