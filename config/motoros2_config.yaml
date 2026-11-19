@@ -136,7 +136,7 @@ stop_motion_on_disconnect: true
 # the data will interfere with applications such as robot_state_publisher.
 #
 # DEFAULT: true
-publish_tf: true
+#publish_tf: true
 
 #-----------------------------------------------------------------------------
 # Should the 'tf' topic be namespaced if 'node_namespace' is configured with a
